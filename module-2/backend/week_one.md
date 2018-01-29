@@ -52,6 +52,14 @@ Note: When you're done, submit a PR.
 15. What's the most commonly used ORM in ruby (Sinatra & Rails)?
   ActiveRecord
 16. Let's say we have an application with restaurants. There are seven verb + path combinations necessary to provide full CRUD functionality for our restaurant application. List each of the seven combinations, and explain what each is for.
+get '/items' - retrieve the information for all the menu items,
+get '/items/new' - display the form to create a new menu item
+get '/items/:id' - retrieve the information for a single menu item
+get '/items/:id/edit' - display the form to edit an exisiting menu item
+post '/items' - create a new menu item
+put '/items/:id' - update this single item in the menu database
+delete '/items' -  delete this single item from the menu database
+
 17. What's a migration? A migration is the process of transferring data.
 18. When you create a migration, does it automatically modify your database?
     No, in order to modify the database, a user must run rake db:migrate.
