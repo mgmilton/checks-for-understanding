@@ -52,11 +52,11 @@ Note: When you're done, submit a PR.
 15. What's the most commonly used ORM in ruby (Sinatra & Rails)?
   ActiveRecord
 16. Let's say we have an application with restaurants. There are seven verb + path combinations necessary to provide full CRUD functionality for our restaurant application. List each of the seven combinations, and explain what each is for.
-17. What's a migration? 
+17. What's a migration? A migration is the process of transferring data.
 18. When you create a migration, does it automatically modify your database?
     No, in order to modify the database, a user must run rake db:migrate.
 19. How does a model relate to a database?
-    A model ....
+    A model directly managaes,queries, and updates the database. 
 20. What is the difference between `#new` and `#create`?
   The ActiveRecord new generates an entry of a database but does not store it. To do that, a user must envoke the #save method. Create combines both #new and #save.
 
@@ -84,19 +84,22 @@ activities = {
   antiquing: {cost: $200, supplies: ['list of antique stores'] 
 }
 ```
-How would I add 'granola bar' to things you should have when hiking? First, I would add the additional three }}} marks to close the hash Then activites[:hiking][:supplies].push("granola")
-
+How would I add 'granola bar' to things you should have when hiking?
+```
+activites[:hiking][:supplies].push("granola")
+```
 23. What are the 4 Principles of OOP? Give a one sentence explanation of each.
+Encapsulation is the intentional hiding of data by restricting access to public methods.
+Abstaction is the usage of a programming object or representation of an actual item where its essential characteristics distinguish it from other objects.
+Inheritance is the construction of relationships between two objects (e.g. sharing methods from a superclass).
+Polymorphism is when a language utilizes the same method to process differnt datatypes individually.
+
 
 
 ### Self Assessment:
 Choose One:
-* I was able to answer every question without relying on outside resources
 * I was able to answer most questions independently, but utilized outside resources for a few
-* I was able to answer a few questions independently, but relied heavily on outside resources 
+
 
 Choose One:
-* I feel confident about the content presented this week
 * I feel comfortable with the content presented this week
-* I feel overwhelmed by the content presented this week
-* I feel quite lost by the content presented this week
