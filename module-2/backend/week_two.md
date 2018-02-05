@@ -60,6 +60,24 @@ HTTP responses are composed of a status line, status code, response body, and re
 ### Optional Questions
 
 1. Name your five favorite ActiveRecord methods (i.e. methods your models inherit from ActiveRecord) and describe what they do.
+```ruby
+# below returns all the values in the object associated with a certain key
+Object.pluck(:key)
+
+# below orders the object in an ascending fashion by the specified key
+Object.order(:key)
+
+#below finds the first instance of the Object where the key equals the desired result and if it does not exist it creates it
+Object.where(key: "desired result).first_or_create
+
+#below returns all merchants with invoices and the second method does the same where the invoices's created_at date resides in a predetermined time_range
+Merchant.joins(:invoices)
+Merchant.joins(:invoices).where(invoices: {created_at: time_range}
+
+#below translates an activerecored query to its equivalent statement in SQL
+Merchant.joins(:invoices).to_sql
+
+````
 2. Name your three favorite ActiveRecord rake tasks and describe what they do.
 3. What two columns does `t.timestamps null: false` create in our database?
 4. In a database that's holding schools and teachers, what will be the relationship between schools and teachers?
