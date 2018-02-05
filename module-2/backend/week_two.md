@@ -70,9 +70,10 @@ Object.order(:key)
 #below finds the first instance of the Object where the key equals the desired result and if it does not exist it creates it
 Object.where(key: "desired result).first_or_create
 
-#below returns all merchants with invoices and the second method does the same where the 
-#invoices's created_at date resides in a predetermined time_range
-
+=begin
+below returns all merchants with invoices and the second method does the same where the 
+invoices's created_at date resides in a predetermined time_range
+=end
 Merchant.joins(:invoices)
 Merchant.joins(:invoices).where(invoices: {created_at: time_range}
 
@@ -100,7 +101,7 @@ A school has many teachers, and a teacher belongs to a school.
 5. In the same database, what will you need to do to create this relationship (draw a schema diagram)?
 
 6. Give an example of when you might want to store information besides ids on a join table.
-It might be usefule to a description column. Or in the example of a doctor and many patients, it might be useful to store a presciption in the doctor_patient join table.
+It might be useful to a description column. Or in the example of a doctor and many patients, it might be useful to store a presciption in the doctor_patient join table.
 
 7. Describe and diagram the relationship between patients and doctors.
 A patient has many doctors, and a doctor has many patients.
