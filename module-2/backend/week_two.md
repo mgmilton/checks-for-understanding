@@ -81,10 +81,32 @@ Merchant.joins(:invoices).to_sql
 
 ````
 2. Name your three favorite ActiveRecord rake tasks and describe what they do.
+```bash
+#below prepares the test database
+rake db:test:prepare
+
+#below reverts the database to the previous migration
+rake db:rollback
+
+#below runs the migrations
+rake db:migrate
+```
 3. What two columns does `t.timestamps null: false` create in our database?
+The `t.timepstamps null: false` stores a `created_at` and `updated_at` columns in the table.
+
 4. In a database that's holding schools and teachers, what will be the relationship between schools and teachers?
+A school has many teachers, and a teacher belongs to a school. 
+
 5. In the same database, what will you need to do to create this relationship (draw a schema diagram)?
+
 6. Give an example of when you might want to store information besides ids on a join table.
+It might be usefule to a description column. Or in the example of a doctor and many patients, it might be useful to store a presciption in the doctor_patient join table.
+
 7. Describe and diagram the relationship between patients and doctors.
+A patient has many doctors, and a doctor has many patients.
+
 8. Describe and diagram the relationship between museums and original_paintings.
+A museum has many original paintings and an original painting belongs to a museum.
+
 9. What could you see in your code that would make you think you might want to create a partial?
+Anytime a form submission is necessary for the Create/Update functionality, then a partial is a great way to keep code from repeating itself. 
