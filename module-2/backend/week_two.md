@@ -5,6 +5,7 @@ Fork this respository. Answer the questions to the best of your ability. Try to 
 Note: When you're done, submit a PR.
 
 1. At a high level, what is ActiveRecord? What does it do/allow you to do?
+ActiveRecord is the most commonly used oject relational mapping tool for converting data from databases into Ruby Objects. This enables ActiveRecord's suite of methods that can sort, query, and access information from the database. 
 2. Assume you have the following model:
 
 ```ruby
@@ -13,8 +14,21 @@ end
 ```
 
 What are some methods you can call on `Team`? If these methods aren't defined in the class, how do you have access to them?
+```ruby
+Team.all
+Team.pluck(:key)
+Team.order(:key)
+Team.find_by
+Team.find
+Team.where
+```
 
 3. Assume that in your database, a team has the following attributes: "id", "name", owner_id". How would you find the name of a team with an id of 4? Assuming your class only included the code from question 2, how could you find the owner of the same team?
+```ruby
+Team.find(4)
+Owner.find(Team.find(4).owner_id)
+```
+
 
 4. Assume that you added a line to your `Team` class as follows:
 
@@ -25,12 +39,26 @@ end
 ```
 
 Now how would you find the owner of the team with an id of 4?
+```ruby
+Team.find(4).owner
+```
 
-5. In a database that's holding students and teachers, what will be the relationship between students and teachers? Draw the schema diagram.
+5. In a database that's holding students and teachers, what will be the relationship between students and teachers? Draw the schema diagram. 
+
+Students      Student_Teacher    Teachers
+--------       -----------       --------
+ID               ID                 ID
+Name            Student_ID         Name 
+                Teacher_ID
+
 6. Define foreign key, primary key, and schema.
-7. Describe the relationship between a foreign key on one table and a primary key on another table.
-8. What are the parts of an HTTP response?
+A foreign key is a field in one table that uniquely identifies an entry in another table. A primary key is a unique identifier for an entry in a table. A schema is a visual representation of the a table and the relations it shares with other tables.  
 
+7. Describe the relationship between a foreign key on one table and a primary key on another table.
+A table's foreign key is the primary key of another table. 
+
+8. What are the parts of an HTTP response?
+HTTP responses are composed of a status line, status code, response body, and response header. 
 
 ### Optional Questions
 
