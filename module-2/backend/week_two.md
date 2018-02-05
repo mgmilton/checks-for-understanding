@@ -70,10 +70,9 @@ Object.order(:key)
 #below finds the first instance of the Object where the key equals the desired result and if it does not exist it creates it
 Object.where(key: "desired result).first_or_create
 
-=begin
-below returns all merchants with invoices and the second method does the same where the 
-invoices's created_at date resides in a predetermined time_range
-=end
+#below returns all merchants with invoices and the second method does the same where the 
+#invoices's created_at date resides in a predetermined time_range
+
 Merchant.joins(:invoices)
 Merchant.joins(:invoices).where(invoices: {created_at: time_range}
 
