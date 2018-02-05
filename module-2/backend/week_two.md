@@ -46,7 +46,7 @@ Team.find(4).owner
 5. In a database that's holding students and teachers, what will be the relationship between students and teachers? Draw the schema diagram. 
 The relationship will be a many to many. Students have many teachers. Teachers have many students. 
 
-![Image of Schema] (http://paulzaich.com/images/blog/sql-schema-example.png)
+![Image of Schema](http://paulzaich.com/images/blog/sql-schema-example.png)
 
 6. Define foreign key, primary key, and schema.
 A foreign key is a field in one table that uniquely identifies an entry in another table. A primary key is a unique identifier for an entry in a table. A schema is a visual representation of the a table and the relations it shares with other tables.  
