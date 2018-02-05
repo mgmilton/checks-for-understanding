@@ -18,9 +18,9 @@ What are some methods you can call on `Team`? If these methods aren't defined in
 Team.all
 Team.pluck(:key)
 Team.order(:key)
-Team.find_by
+Team.find_by(key: "desired_result")
 Team.find
-Team.where
+Team.where(key: "desired_result")
 ```
 
 3. Assume that in your database, a team has the following attributes: "id", "name", owner_id". How would you find the name of a team with an id of 4? Assuming your class only included the code from question 2, how could you find the owner of the same team?
