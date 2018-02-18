@@ -41,10 +41,14 @@ A few strategies for keeping views dry include utilizing partials, utilizing mix
 Reviews Questions 
 13. Given the following array of hashes, how would I print an alphabetical list of holidays?
 ```ruby
-[
+holidays = [
  {holiday: {name: "St Patrick's Day", supplies: ["Corned Beef and Cabbage"]}},
  {holiday: {name: "Halloween", supplies: ["Candy", "Costume"]}},
  {holiday: {name: "Hanukkah", supplies: ["Menorah"]}}
 ]
+holidays.map do |holiday|
+  holiday[:holiday][:name]
+ end.sort
+
 ```  
 14. How would you clean incoming data to ensure "$300" or "300.00" is stored as 300? 
