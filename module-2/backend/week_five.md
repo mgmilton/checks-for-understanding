@@ -91,7 +91,11 @@ scope   scope :"Secretariat", -> { where(name: 'Secretariat') } do
         ```
   
 13. What is polymorphism? How does it relate to duck-typing? What are two ways you use this in everyday Rails applications?
-A polymorphism is x,y z. It relates to duck-typing through x,y,z. Two ways you use this in everyday Rails application is x and y. 
+A polymorphism - in the context of object oriented programming - means a subclass can override a method of a base class. Duck typing is the porcess of an object repsonding to a well-named method. For instance, the model horse could respond to a method nay where "I am horse is printed to the screen." Additionally a model station could respond to the maximum method where the argument is a numeric attribute of the model.
+```ruby
+horse.nay("string")
+station.maximum(:id)
+```
 
 14. How would you clean the string "(630) 854-5483" to "630.854.5483"? 
  ```ruby
