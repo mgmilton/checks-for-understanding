@@ -45,10 +45,10 @@ Stylesheet_link_tag loads all the stylsheets within the application, javascript_
 - Acknowledgements
 
 8. What are the top four accessibility issues that we as developers should be aware of?
-- 1. An issue of web accessibility could be caused by a user having tacitle difficulties such as muscular dystrophy. 
-- 2. An issue of web accessibility could be caused by a user having learning disablity such as Fragile X disorder. 
-- 3. An issue of web accessibility could be caused by a user having visual impairment such as age related ocular degenartion.
-- 4. An issue of web accessibility could be caused by a user having hearing impairment suach as hypoplasia. 
+-1. An issue of web accessibility could be caused by a user having tacitle difficulties such as muscular dystrophy. 
+-2. An issue of web accessibility could be caused by a user having learning disablity such as Fragile X disorder. 
+-3. An issue of web accessibility could be caused by a user having visual impairment such as age related ocular degenartion.
+-4. An issue of web accessibility could be caused by a user having hearing impairment suach as hypoplasia. 
 
 9. `before_save` is an example of a what? Where in our Rails application would we find a `before_save`?
 Callbacks ```before_save``` should only be utilized in the controller. It is possible to find a ```before_save``` action in a Carts controller to add an update to a price. 
