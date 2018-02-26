@@ -35,7 +35,7 @@ Stylesheet_link_tag loads all the stylsheets within the application, javascript_
 
 7. What are some of the elements of a great read me? What are some of the benefits of taking the time to update a readme for our project?
 - Purpose/Abstract
-- Link Sectioning(#review-questions) for a table of contents
+- [Link Sectioning](#review-questions) for a table of contents
 - Schema
 - Local Installation
 - Deployment
