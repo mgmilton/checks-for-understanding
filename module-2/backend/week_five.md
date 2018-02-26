@@ -17,7 +17,7 @@ Inside the ```app/views/layout/application.html.erb```, we place the below messa
 Cart information is stored within a session. 
 
 3. What might be some reasons not to store a cart in our database? Are there any reasons why we would want to persist that information?
-Primarily for security reasons, a store would want to have purchase information of a cart in a separate database. Amazon also utilizes a cache storage system for their carts so that shoppers can consitently purchase books that they will not read. Thanks Jeff Bezsos!
+Primarily for security reasons, a store would want to have purchase information of a cart in a separate database. Amazon also utilizes a cache storage system for their carts so that shoppers can consitently purchase books that they will not read. Thanks Jeff Bezos!
 
 4. What is the purpose of the asset pipeline?
 The purpose of the asset pipeline it reduce the storage load of all assets by compiling each photo and minify them into a serialized javascript file. This enables the application assets to be automatically combined with assets utilized by gems. 
