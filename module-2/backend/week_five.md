@@ -77,15 +77,15 @@ scope   scope :"Secretariat", -> { where(name: 'Secretariat') } do
 {cart: {"17" => 4, "204" => 52, "29" => 22}}
 ```
 
-  12a. How would you add item with id of 48 with a quantity of 4?  
+ - 12a. How would you add item with id of 48 with a quantity of 4?  
         ```
         cart[48] = 4
         ```
-  12b. How would you increase the quantity of item 29?  
+ - 12b. How would you increase the quantity of item 29?  
         ```
         cart.add_item("29")
         ```
-  12c. How would you find out how many items your user is thinking about purchasing?
+ - 12c. How would you find out how many items your user is thinking about purchasing?
         ```
         cart.values.sum
         ```
