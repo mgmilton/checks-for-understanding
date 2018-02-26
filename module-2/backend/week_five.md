@@ -1,7 +1,21 @@
 Questions from Week 5:
 1. How do we make flash messages display on a page?
+Inside the ```app/views/layout/application.html.erb```, we place the below message:
+
+```ruby
+    <main id="main-container">
+      <% flash.each do |type, message| %>
+      <%= content_tag :div, message, class: type %>
+      <% end %>
+      Cart: <%= @cart.total_count %>
+
+    <%= yield %>
+
+  </main>
+  ```
 
 2. Where is cart information/temporary information usually stored?
+Cart information is stored within a session. 
 
 3. What might be some reasons not to store a cart in our database? Are there any reasons why we would want to persist that information?
 
